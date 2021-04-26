@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+<div id="save">
+
+    账户id： <input type="text" v-model="accountId" name="accountId"/>
+    金额：<input type="text" v-model="money" name="money"/>
+    入账id：<input  type="text" v-model ="inAccountId" name="inAccountId"/>
+    <input type="button" value="存款" @click="Deposite()"/>
+    <input type="button" value="取款" @click="Withdraw()"/>
+    <input type="button" value="转账" @click="Transfer()"/>
+    <input type="button" value="开户" @click="OpenA()"/>
+    <input type="button" value="查询" @click="findbyId()"/>
+    <input type="button" value="查询所有" @click="findAll()"/>
+    <div id="result"></div>
+
+    <table class="a">
+
+        <tr><td>账户id</td> <td>余额</td> </tr>
+        <tr><td>{{accountId}}</td> <td>{{balance}}</td></tr>
+        <tr v-for="id in ids" ><td >{{id.accountId}}</td> <td >{{id.balance}}</td></tr>
+
+
+    </table>
+
+</div >
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript "  src="js/vue.js"></script>
+
+<script type="text/javascript" src="js/axios.js"></script>
+<script type="text/javascript">
+
+
+    var vm = new Vue({
+        el: '#save',
+        data: {
+            ids:[],
+            accountId:'',
+            money: '',
+            inAccountId:'',
+            optype:'',
+            balance:''
+
+
+        },
+        mounted:function(){
+
+
+        },
+        methods: {
+            Deposite:function(){
+                var a=this.money;
+                $.get("/mybank/deposite", {  accountId:this.accountId,money:this.money,inAccountId: " " },
+                    function(data){
+
+
+                        if(data.code==0){
+                            alert(data.msg);
+                            window.location.reload();
+                        }else {
+
+                            alert("用户"+data.data.accountId+"存入"+a+",余额为"+data.data.balance);
+                            window.location.reload();
+                        }
+
+                    });
+            },
+            Withdraw:function(){
+                var a=this.money;
+                $.get("/mybank/withdraw", {  accountId:this.accountId,money:this.money,inAccountId: " "  },
+                    function(data){
+                        if(data.code==0){
+                            alert(data.msg);
+                            window.location.reload();
+                        }else {
+
+                            alert("用户"+data.data.accountId+"取出"+a+",余额为"+data.data.balance);
+                            window.location.reload();
+                        }
+
+                    });
+            },
+            Transfer:function(){
+                var a=this.money;
+                var b=this.inAccountId;
+                $.get("/mybank/transfer", { accountId:this.accountId,inAccountId:this.inAccountId ,money:this.money},
+                    function(data){
+                        if(data.code==0){
+                            alert(data.msg);
+                            window.location.reload();
+                        }else {
+
+                            alert("用户"+data.data.accountId+"转入"+a+"给用户"+b+",余额为"+data.data.balance);
+                            window.location.reload();
+                        }
+                    });
+            },
+            OpenA:function(){
+                $.get("/mybank/openAccounts", { accountId:this.accountId,money:this.money},
+                    function(data){
+                        if(data!=null){
+                            alert("开户成功");
+                        }else {
+                            alert("开户失败");
+                        }
+                        window.location.reload();
+                    });
+            },
+            findAll:function(){
+                var that = this;
+                $.get("/mybank/findAll",{ },function (data){
+                    //$('.a').css('display','block');
+                    that.ids=data;
+                    // 或者将that.ids 改成 vm.ids
+
+                });
+            },
+            findbyId:function(){
+                $.get("/mybank/findbyId", { accountId:this.accountId},
+                    function(data){
+                        if(data.code==0){
+                            alert(data.msg);
+
+                        }else {
+                               vm.balance=data.data.balance;
+                            alert("用户余额为："+data.data.balance);
+
+                        }
+                    });
+            }
+
+
+
+
+        }
+    });
+</script>
+</body>
+</html>

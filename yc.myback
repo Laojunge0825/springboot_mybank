@@ -1,0 +1,266 @@
+2021-04-26 19:31:04.542  INFO 24132 --- [restartedMain] com.yc.MybankApplication                 : Starting MybankApplication using Java 1.8.0_65 on LAPTOP-8C3O3CMJ with PID 24132 (D:\IdeaProjects\mybank\target\classes started by ASUS in D:\IdeaProjects\mybank)
+2021-04-26 19:31:04.549  INFO 24132 --- [restartedMain] com.yc.MybankApplication                 : No active profile set, falling back to default profiles: default
+2021-04-26 19:31:06.920  WARN 24132 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'swagger2config': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'swagger.enabled' in value "${swagger.enabled}"
+2021-04-26 19:31:06.965 ERROR 24132 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'swagger2config': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'swagger.enabled' in value "${swagger.enabled}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:405) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.6.jar:5.3.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.6.jar:5.3.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144) ~[spring-boot-2.4.5.jar:2.4.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:782) [spring-boot-2.4.5.jar:2.4.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:774) [spring-boot-2.4.5.jar:2.4.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) [spring-boot-2.4.5.jar:2.4.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339) [spring-boot-2.4.5.jar:2.4.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1340) [spring-boot-2.4.5.jar:2.4.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329) [spring-boot-2.4.5.jar:2.4.5]
+	at com.yc.MybankApplication.main(MybankApplication.java:10) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_65]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_65]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_65]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_65]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.4.5.jar:2.4.5]
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'swagger.enabled' in value "${swagger.enabled}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:178) ~[spring-core-5.3.6.jar:5.3.6]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124) ~[spring-core-5.3.6.jar:5.3.6]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-5.3.6.jar:5.3.6]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-5.3.6.jar:5.3.6]
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:175) ~[spring-context-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:936) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1321) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.6.jar:5.3.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.6.jar:5.3.6]
+	... 23 common frames omitted
+
+2021-04-26 19:31:58.919  INFO 16560 --- [restartedMain] com.yc.MybankApplication                 : Starting MybankApplication using Java 1.8.0_65 on LAPTOP-8C3O3CMJ with PID 16560 (D:\IdeaProjects\mybank\target\classes started by ASUS in D:\IdeaProjects\mybank)
+2021-04-26 19:31:58.923  INFO 16560 --- [restartedMain] com.yc.MybankApplication                 : No active profile set, falling back to default profiles: default
+2021-04-26 19:32:01.547  INFO 16560 --- [restartedMain] com.yc.MybankApplication                 : Started MybankApplication in 3.227 seconds (JVM running for 4.466)
+2021-04-26 19:43:01.082  INFO 27760 --- [restartedMain] com.yc.MybankApplication                 : Starting MybankApplication using Java 1.8.0_65 on LAPTOP-8C3O3CMJ with PID 27760 (D:\IdeaProjects\mybank\target\classes started by ASUS in D:\IdeaProjects\mybank)
+2021-04-26 19:43:01.086  INFO 27760 --- [restartedMain] com.yc.MybankApplication                 : No active profile set, falling back to default profiles: default
+2021-04-26 19:43:03.196  INFO 27760 --- [restartedMain] com.yc.MybankApplication                 : Started MybankApplication in 2.529 seconds (JVM running for 3.446)
+2021-04-26 19:44:11.426  INFO 15532 --- [restartedMain] com.yc.MybankApplication                 : Starting MybankApplication using Java 1.8.0_65 on LAPTOP-8C3O3CMJ with PID 15532 (D:\IdeaProjects\mybank\target\classes started by ASUS in D:\IdeaProjects\mybank)
+2021-04-26 19:44:11.429  INFO 15532 --- [restartedMain] com.yc.MybankApplication                 : No active profile set, falling back to default profiles: default
+2021-04-26 19:44:13.677  INFO 15532 --- [restartedMain] com.yc.MybankApplication                 : Started MybankApplication in 2.663 seconds (JVM running for 3.548)
+2021-04-26 19:52:13.789  INFO 20636 --- [restartedMain] com.yc.MybankApplication                 : Starting MybankApplication using Java 1.8.0_65 on LAPTOP-8C3O3CMJ with PID 20636 (D:\IdeaProjects\mybank\target\classes started by ASUS in D:\IdeaProjects\mybank)
+2021-04-26 19:52:13.793  INFO 20636 --- [restartedMain] com.yc.MybankApplication                 : No active profile set, falling back to default profiles: default
+2021-04-26 19:52:15.908  INFO 20636 --- [restartedMain] com.yc.MybankApplication                 : Started MybankApplication in 2.536 seconds (JVM running for 3.395)
+2021-04-26 19:53:12.100  WARN 20636 --- [http-nio-80-exec-5] com.yc.tx.controller.AccountController   : 用户1，取出100.0
+2021-04-26 20:06:32.688  INFO 24268 --- [restartedMain] com.yc.MybankApplication                 : Starting MybankApplication using Java 1.8.0_65 on LAPTOP-8C3O3CMJ with PID 24268 (D:\IdeaProjects\mybank\target\classes started by ASUS in D:\IdeaProjects\mybank)
+2021-04-26 20:06:32.691  INFO 24268 --- [restartedMain] com.yc.MybankApplication                 : No active profile set, falling back to default profiles: default
+2021-04-26 20:06:34.919  INFO 24268 --- [restartedMain] com.yc.MybankApplication                 : Started MybankApplication in 2.719 seconds (JVM running for 3.593)
+2021-04-26 20:07:37.983  INFO 13176 --- [restartedMain] com.yc.MybankApplication                 : Starting MybankApplication using Java 1.8.0_65 on LAPTOP-8C3O3CMJ with PID 13176 (D:\IdeaProjects\mybank\target\classes started by ASUS in D:\IdeaProjects\mybank)
+2021-04-26 20:07:37.986  INFO 13176 --- [restartedMain] com.yc.MybankApplication                 : No active profile set, falling back to default profiles: default
+2021-04-26 20:07:40.238  INFO 13176 --- [restartedMain] com.yc.MybankApplication                 : Started MybankApplication in 2.693 seconds (JVM running for 3.566)
+2021-04-26 20:08:11.922  INFO 26044 --- [restartedMain] com.yc.MybankApplication                 : Starting MybankApplication using Java 1.8.0_65 on LAPTOP-8C3O3CMJ with PID 26044 (D:\IdeaProjects\mybank\target\classes started by ASUS in D:\IdeaProjects\mybank)
+2021-04-26 20:08:11.926  INFO 26044 --- [restartedMain] com.yc.MybankApplication                 : No active profile set, falling back to default profiles: default
+2021-04-26 20:08:14.092  INFO 26044 --- [restartedMain] com.yc.MybankApplication                 : Started MybankApplication in 2.661 seconds (JVM running for 3.642)
+2021-04-26 20:08:18.962 ERROR 26044 --- [http-nio-80-exec-5] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/mybank] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+
+java.lang.NullPointerException: null
+	at com.yc.tx.service.AccountServiceImpl.showBalance(AccountServiceImpl.java:101) ~[classes/:na]
+	at com.yc.tx.service.AccountServiceImpl$$FastClassBySpringCGLIB$$e4eb3694.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.6.jar:5.3.6]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779) ~[spring-aop-5.3.6.jar:5.3.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.6.jar:5.3.6]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-5.3.6.jar:5.3.6]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.6.jar:5.3.6]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.6.jar:5.3.6]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.6.jar:5.3.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.6.jar:5.3.6]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-5.3.6.jar:5.3.6]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692) ~[spring-aop-5.3.6.jar:5.3.6]
+	at com.yc.tx.service.AccountServiceImpl$$EnhancerBySpringCGLIB$$ffae3a74.showBalance(<generated>) ~[classes/:na]
+	at com.yc.tx.controller.AccountController.FindbyId(AccountController.java:142) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_65]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_65]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_65]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_65]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.45.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.45.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707) [tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.45.jar:9.0.45]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_65]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_65]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.45.jar:9.0.45]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_65]
+
+2021-04-26 20:08:19.881 ERROR 26044 --- [http-nio-80-exec-6] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/mybank] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+
+java.lang.NullPointerException: null
+	at com.yc.tx.service.AccountServiceImpl.showBalance(AccountServiceImpl.java:101) ~[classes/:na]
+	at com.yc.tx.service.AccountServiceImpl$$FastClassBySpringCGLIB$$e4eb3694.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.6.jar:5.3.6]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779) ~[spring-aop-5.3.6.jar:5.3.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.6.jar:5.3.6]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-5.3.6.jar:5.3.6]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.6.jar:5.3.6]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.6.jar:5.3.6]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.6.jar:5.3.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.6.jar:5.3.6]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-5.3.6.jar:5.3.6]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692) ~[spring-aop-5.3.6.jar:5.3.6]
+	at com.yc.tx.service.AccountServiceImpl$$EnhancerBySpringCGLIB$$ffae3a74.showBalance(<generated>) ~[classes/:na]
+	at com.yc.tx.controller.AccountController.FindbyId(AccountController.java:142) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_65]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_65]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_65]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_65]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.45.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.6.jar:5.3.6]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.45.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.6.jar:5.3.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707) [tomcat-embed-core-9.0.45.jar:9.0.45]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.45.jar:9.0.45]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_65]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_65]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.45.jar:9.0.45]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_65]
+
+2021-04-26 20:09:14.156  INFO 23424 --- [restartedMain] com.yc.MybankApplication                 : Starting MybankApplication using Java 1.8.0_65 on LAPTOP-8C3O3CMJ with PID 23424 (D:\IdeaProjects\mybank\target\classes started by ASUS in D:\IdeaProjects\mybank)
+2021-04-26 20:09:14.159  INFO 23424 --- [restartedMain] com.yc.MybankApplication                 : No active profile set, falling back to default profiles: default
+2021-04-26 20:09:16.283  INFO 23424 --- [restartedMain] com.yc.MybankApplication                 : Started MybankApplication in 2.549 seconds (JVM running for 3.491)
+2021-04-26 20:14:53.767  INFO 28404 --- [restartedMain] com.yc.MybankApplication                 : Starting MybankApplication using Java 1.8.0_65 on LAPTOP-8C3O3CMJ with PID 28404 (D:\IdeaProjects\mybank\target\classes started by ASUS in D:\IdeaProjects\mybank)
+2021-04-26 20:14:53.770  INFO 28404 --- [restartedMain] com.yc.MybankApplication                 : No active profile set, falling back to default profiles: default
+2021-04-26 20:14:56.034  INFO 28404 --- [restartedMain] com.yc.MybankApplication                 : Started MybankApplication in 2.654 seconds (JVM running for 3.563)
+2021-04-26 20:16:45.105  WARN 28404 --- [http-nio-80-exec-4] com.yc.tx.controller.AccountController   : 用户请求开户，存入null
+2021-04-26 20:31:09.563  INFO 19808 --- [restartedMain] com.yc.MybankApplication                 : Starting MybankApplication using Java 1.8.0_65 on LAPTOP-8C3O3CMJ with PID 19808 (D:\IdeaProjects\mybank\target\classes started by ASUS in D:\IdeaProjects\mybank)
+2021-04-26 20:31:09.566  INFO 19808 --- [restartedMain] com.yc.MybankApplication                 : No active profile set, falling back to default profiles: default
+2021-04-26 20:31:11.902  INFO 19808 --- [restartedMain] com.yc.MybankApplication                 : Started MybankApplication in 2.74 seconds (JVM running for 3.612)
+2021-04-26 20:31:28.553  WARN 19808 --- [http-nio-80-exec-7] com.yc.tx.controller.AccountController   : 用户请求开户，存入null
+2021-04-26 20:32:13.697  INFO 25640 --- [restartedMain] com.yc.MybankApplication                 : Starting MybankApplication using Java 1.8.0_65 on LAPTOP-8C3O3CMJ with PID 25640 (D:\IdeaProjects\mybank\target\classes started by ASUS in D:\IdeaProjects\mybank)
+2021-04-26 20:32:13.700  INFO 25640 --- [restartedMain] com.yc.MybankApplication                 : No active profile set, falling back to default profiles: default
+2021-04-26 20:32:16.149  INFO 25640 --- [restartedMain] com.yc.MybankApplication                 : Started MybankApplication in 2.874 seconds (JVM running for 3.806)
+2021-04-26 20:32:44.710  WARN 25640 --- [http-nio-80-exec-7] com.yc.tx.controller.AccountController   : 用户请求开户，存入null
+2021-04-26 20:34:18.377  INFO 26524 --- [restartedMain] com.yc.MybankApplication                 : Starting MybankApplication using Java 1.8.0_65 on LAPTOP-8C3O3CMJ with PID 26524 (D:\IdeaProjects\mybank\target\classes started by ASUS in D:\IdeaProjects\mybank)
+2021-04-26 20:34:18.380  INFO 26524 --- [restartedMain] com.yc.MybankApplication                 : No active profile set, falling back to default profiles: default
+2021-04-26 20:34:20.492  INFO 26524 --- [restartedMain] com.yc.MybankApplication                 : Started MybankApplication in 2.495 seconds (JVM running for 3.452)
+2021-04-26 20:35:29.160  INFO 14484 --- [restartedMain] com.yc.MybankApplication                 : Starting MybankApplication using Java 1.8.0_65 on LAPTOP-8C3O3CMJ with PID 14484 (D:\IdeaProjects\mybank\target\classes started by ASUS in D:\IdeaProjects\mybank)
+2021-04-26 20:35:29.163  INFO 14484 --- [restartedMain] com.yc.MybankApplication                 : No active profile set, falling back to default profiles: default
+2021-04-26 20:35:31.275  INFO 14484 --- [restartedMain] com.yc.MybankApplication                 : Started MybankApplication in 2.559 seconds (JVM running for 3.532)
+2021-04-26 20:35:55.904  INFO 28052 --- [restartedMain] com.yc.MybankApplication                 : Starting MybankApplication using Java 1.8.0_65 on LAPTOP-8C3O3CMJ with PID 28052 (D:\IdeaProjects\mybank\target\classes started by ASUS in D:\IdeaProjects\mybank)
+2021-04-26 20:35:55.907  INFO 28052 --- [restartedMain] com.yc.MybankApplication                 : No active profile set, falling back to default profiles: default
+2021-04-26 20:35:58.172  INFO 28052 --- [restartedMain] com.yc.MybankApplication                 : Started MybankApplication in 2.685 seconds (JVM running for 3.634)
+2021-04-26 20:40:08.538  INFO 2392 --- [restartedMain] com.yc.MybankApplication                 : Starting MybankApplication using Java 1.8.0_65 on LAPTOP-8C3O3CMJ with PID 2392 (D:\IdeaProjects\mybank\target\classes started by ASUS in D:\IdeaProjects\mybank)
+2021-04-26 20:40:08.542  INFO 2392 --- [restartedMain] com.yc.MybankApplication                 : No active profile set, falling back to default profiles: default
+2021-04-26 20:40:10.679  INFO 2392 --- [restartedMain] com.yc.MybankApplication                 : Started MybankApplication in 2.527 seconds (JVM running for 3.441)
+2021-04-26 20:40:25.015  INFO 21112 --- [restartedMain] com.yc.MybankApplication                 : Starting MybankApplication using Java 1.8.0_65 on LAPTOP-8C3O3CMJ with PID 21112 (D:\IdeaProjects\mybank\target\classes started by ASUS in D:\IdeaProjects\mybank)
+2021-04-26 20:40:25.018  INFO 21112 --- [restartedMain] com.yc.MybankApplication                 : No active profile set, falling back to default profiles: default
+2021-04-26 20:40:27.634  INFO 21112 --- [restartedMain] com.yc.MybankApplication                 : Started MybankApplication in 3.013 seconds (JVM running for 3.914)
+2021-04-26 20:43:32.916  INFO 8808 --- [restartedMain] com.yc.MybankApplication                 : Starting MybankApplication using Java 1.8.0_65 on LAPTOP-8C3O3CMJ with PID 8808 (D:\IdeaProjects\mybank\target\classes started by ASUS in D:\IdeaProjects\mybank)
+2021-04-26 20:43:32.919  INFO 8808 --- [restartedMain] com.yc.MybankApplication                 : No active profile set, falling back to default profiles: default
+2021-04-26 20:43:35.040  INFO 8808 --- [restartedMain] com.yc.MybankApplication                 : Started MybankApplication in 2.54 seconds (JVM running for 3.489)
+2021-04-26 20:43:57.506  WARN 8808 --- [http-nio-80-exec-7] com.yc.tx.controller.AccountController   : 用户null，存入null
+2021-04-26 20:44:32.810  WARN 8808 --- [http-nio-80-exec-5] com.yc.tx.controller.AccountController   : 用户null，存入null
+2021-04-26 20:45:05.429  WARN 8808 --- [http-nio-80-exec-8] com.yc.tx.controller.AccountController   : 用户null，存入null
+2021-04-26 20:46:37.090  INFO 22020 --- [restartedMain] com.yc.MybankApplication                 : Starting MybankApplication using Java 1.8.0_65 on LAPTOP-8C3O3CMJ with PID 22020 (D:\IdeaProjects\mybank\target\classes started by ASUS in D:\IdeaProjects\mybank)
+2021-04-26 20:46:37.093  INFO 22020 --- [restartedMain] com.yc.MybankApplication                 : No active profile set, falling back to default profiles: default
+2021-04-26 20:46:39.270  INFO 22020 --- [restartedMain] com.yc.MybankApplication                 : Started MybankApplication in 2.588 seconds (JVM running for 3.447)
+2021-04-26 20:46:58.903  WARN 22020 --- [http-nio-80-exec-10] com.yc.tx.controller.AccountController   : 用户null，存入null
+2021-04-26 20:47:35.401  INFO 21924 --- [restartedMain] com.yc.MybankApplication                 : Starting MybankApplication using Java 1.8.0_65 on LAPTOP-8C3O3CMJ with PID 21924 (D:\IdeaProjects\mybank\target\classes started by ASUS in D:\IdeaProjects\mybank)
+2021-04-26 20:47:35.405  INFO 21924 --- [restartedMain] com.yc.MybankApplication                 : No active profile set, falling back to default profiles: default
+2021-04-26 20:47:50.124  INFO 26180 --- [restartedMain] com.yc.MybankApplication                 : Starting MybankApplication using Java 1.8.0_65 on LAPTOP-8C3O3CMJ with PID 26180 (D:\IdeaProjects\mybank\target\classes started by ASUS in D:\IdeaProjects\mybank)
+2021-04-26 20:47:50.127  INFO 26180 --- [restartedMain] com.yc.MybankApplication                 : No active profile set, falling back to default profiles: default
+2021-04-26 20:47:53.074  INFO 26180 --- [restartedMain] com.yc.MybankApplication                 : Started MybankApplication in 3.496 seconds (JVM running for 6.048)
+2021-04-26 20:48:48.804  WARN 26180 --- [http-nio-80-exec-7] com.yc.tx.controller.AccountController   : 用户null，存入null
+2021-04-26 20:48:48.804  WARN 26180 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=55s956ms872µs500ns).
+2021-04-26 20:48:58.979  INFO 26276 --- [restartedMain] com.yc.MybankApplication                 : Starting MybankApplication using Java 1.8.0_65 on LAPTOP-8C3O3CMJ with PID 26276 (D:\IdeaProjects\mybank\target\classes started by ASUS in D:\IdeaProjects\mybank)
+2021-04-26 20:48:58.983  INFO 26276 --- [restartedMain] com.yc.MybankApplication                 : No active profile set, falling back to default profiles: default
+2021-04-26 20:49:01.953  INFO 26276 --- [restartedMain] com.yc.MybankApplication                 : Started MybankApplication in 3.513 seconds (JVM running for 4.957)
+2021-04-26 20:49:22.803  WARN 26276 --- [http-nio-80-exec-7] com.yc.tx.controller.AccountController   : 用户5，存入10.0
+2021-04-26 20:50:28.845  INFO 3760 --- [restartedMain] com.yc.MybankApplication                 : Starting MybankApplication using Java 1.8.0_65 on LAPTOP-8C3O3CMJ with PID 3760 (D:\IdeaProjects\mybank\target\classes started by ASUS in D:\IdeaProjects\mybank)
+2021-04-26 20:50:28.848  INFO 3760 --- [restartedMain] com.yc.MybankApplication                 : No active profile set, falling back to default profiles: default
+2021-04-26 20:50:30.950  INFO 3760 --- [restartedMain] com.yc.MybankApplication                 : Started MybankApplication in 2.515 seconds (JVM running for 3.383)
+2021-04-26 20:52:07.573  WARN 3760 --- [http-nio-80-exec-5] com.yc.tx.controller.AccountController   : 用户请求开户，存入null
+2021-04-26 20:52:40.447  INFO 26464 --- [restartedMain] com.yc.MybankApplication                 : Starting MybankApplication using Java 1.8.0_65 on LAPTOP-8C3O3CMJ with PID 26464 (D:\IdeaProjects\mybank\target\classes started by ASUS in D:\IdeaProjects\mybank)
+2021-04-26 20:52:40.450  INFO 26464 --- [restartedMain] com.yc.MybankApplication                 : No active profile set, falling back to default profiles: default
+2021-04-26 20:52:42.876  INFO 26464 --- [restartedMain] com.yc.MybankApplication                 : Started MybankApplication in 2.87 seconds (JVM running for 3.973)
+2021-04-26 20:52:54.926  WARN 26464 --- [http-nio-80-exec-7] com.yc.tx.controller.AccountController   : 用户请求开户，存入null
+2021-04-26 20:53:34.504  INFO 27028 --- [restartedMain] com.yc.MybankApplication                 : Starting MybankApplication using Java 1.8.0_65 on LAPTOP-8C3O3CMJ with PID 27028 (D:\IdeaProjects\mybank\target\classes started by ASUS in D:\IdeaProjects\mybank)
+2021-04-26 20:53:34.506  INFO 27028 --- [restartedMain] com.yc.MybankApplication                 : No active profile set, falling back to default profiles: default
+2021-04-26 20:53:36.933  INFO 27028 --- [restartedMain] com.yc.MybankApplication                 : Started MybankApplication in 2.862 seconds (JVM running for 4.214)
+2021-04-26 20:54:08.003  WARN 27028 --- [http-nio-80-exec-7] com.yc.tx.controller.AccountController   : 用户请求开户，存入null

@@ -1,0 +1,3 @@
+2021-04-24 21:15:19.712  INFO 22520 --- [restartedMain] com.yc.MybankApplication                 : Starting MybankApplication using Java 1.8.0_65 on LAPTOP-8C3O3CMJ with PID 22520 (D:\IdeaProjects\mybank\target\classes started by ASUS in D:\IdeaProjects\mybank)
+2021-04-24 21:15:19.715  INFO 22520 --- [restartedMain] com.yc.MybankApplication                 : No active profile set, falling back to default profiles: default
+2021-04-24 21:15:21.293  INFO 22520 --- [restartedMain] com.yc.MybankApplication                 : Started MybankApplication in 1.964 seconds (JVM running for 2.798)
